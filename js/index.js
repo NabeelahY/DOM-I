@@ -50,4 +50,15 @@ nav[2].innerText = siteContent.nav["nav-item-3"];
 nav[3].innerText = siteContent.nav["nav-item-4"];
 nav[4].innerText = siteContent.nav["nav-item-5"];
 nav[5].innerText = siteContent.nav["nav-item-6"];
-console.log(nav)
+
+
+let mainHeader = document.querySelector('div.cta-text > h1')
+mainHeader.innerText = siteContent.cta.h1;
+
+let mainBtn = document.querySelector('div.cta-text > button')
+
+mainBtn.innerText = siteContent.cta.button;
+
+let mainImg = document.getElementById("cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+console.log(mainBtn)
