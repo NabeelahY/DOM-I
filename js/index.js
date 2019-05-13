@@ -51,7 +51,7 @@ nav[3].innerText = siteContent.nav["nav-item-4"];
 nav[4].innerText = siteContent.nav["nav-item-5"];
 nav[5].innerText = siteContent.nav["nav-item-6"];
 
-
+// BANNER
 let mainHeader = document.querySelector('div.cta-text > h1')
 mainHeader.innerText = siteContent.cta.h1;
 
@@ -61,4 +61,19 @@ mainBtn.innerText = siteContent.cta.button;
 
 let mainImg = document.getElementById("cta-img");
 mainImg.setAttribute('src', siteContent["cta"]["img-src"])
-console.log(mainBtn)
+
+
+// TOP-CONTENT
+let topContentTitle = document.querySelectorAll('div.top-content > div > h4');
+
+topContentTitle[0].innerText = siteContent["main-content"]["features-h4"];
+
+topContentTitle[1].innerText = siteContent["main-content"]["about-h4"];
+
+let topContent = [...document.querySelectorAll('div.top-content > div > p')];
+
+topContent[0].innerText = siteContent["main-content"]["features-content"];
+
+topContent[1].innerText = siteContent["main-content"]["about-content"];
+
+console.log(topContentTitle)
