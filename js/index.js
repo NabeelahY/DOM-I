@@ -76,4 +76,28 @@ topContent[0].innerText = siteContent["main-content"]["features-content"];
 
 topContent[1].innerText = siteContent["main-content"]["about-content"];
 
-console.log(topContentTitle)
+//MIIDLE IMG
+
+let middleImg = document.getElementById("middle-img");
+
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+// BOTTOM CONTENT
+
+let bottomContentTitle = document.querySelectorAll('div.bottom-content > div > h4');
+
+bottomContentTitle[0].innerText = siteContent["main-content"]["services-h4"];
+
+bottomContentTitle[1].innerText = siteContent["main-content"]["product-h4"];
+
+bottomContentTitle[2].innerText = siteContent["main-content"]["vision-h4"];
+
+let bottomContent = document.querySelectorAll('div.bottom-content > div > p');
+
+bottomContent[0].innerText = siteContent["main-content"]["services-content"];
+
+bottomContent[1].innerText = siteContent["main-content"]["product-content"];
+
+bottomContent[2].innerText = siteContent["main-content"]["vision-content"];
+console.log(bottomContent)
