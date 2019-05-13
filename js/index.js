@@ -100,4 +100,21 @@ bottomContent[0].innerText = siteContent["main-content"]["services-content"];
 bottomContent[1].innerText = siteContent["main-content"]["product-content"];
 
 bottomContent[2].innerText = siteContent["main-content"]["vision-content"];
-console.log(bottomContent)
+
+// CONTACT
+
+let contactTitle = document.querySelector('section.contact > h4');
+
+contactTitle.innerText = siteContent["contact"]["contact-h4"];
+
+let contactPar = document.querySelectorAll('section.contact > p');
+
+contactPar[0].innerText = siteContent["contact"].address;
+contactPar[1].innerText = siteContent["contact"].phone;
+contactPar[2].innerText = siteContent["contact"].email;
+
+// FOOTER
+
+let footer = document.querySelector('footer > p');
+
+footer.innerText = siteContent["footer"].copyright;
