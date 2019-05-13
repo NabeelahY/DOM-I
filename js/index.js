@@ -43,13 +43,29 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 
 // NAV - BAR
-let nav = [...document.querySelectorAll('a')];
-nav[0].innerText = siteContent.nav["nav-item-1"];
-nav[1].innerText = siteContent.nav["nav-item-2"];
-nav[2].innerText = siteContent.nav["nav-item-3"];
-nav[3].innerText = siteContent.nav["nav-item-4"];
-nav[4].innerText = siteContent.nav["nav-item-5"];
-nav[5].innerText = siteContent.nav["nav-item-6"];
+let nav = document.querySelector('nav');
+
+nav.children[0].innerText = siteContent.nav["nav-item-1"];
+nav.children[1].innerText = siteContent.nav["nav-item-2"];
+nav.children[2].innerText = siteContent.nav["nav-item-3"];
+nav.children[3].innerText = siteContent.nav["nav-item-4"];
+nav.children[4].innerText = siteContent.nav["nav-item-5"];
+nav.children[5].innerText = siteContent.nav["nav-item-6"];
+
+// CREATE NEW ELEMENTS
+
+let blog = document.createElement('a');
+blog.innerText = 'Blog';
+nav.appendChild(blog);
+
+let home = document.createElement('a');
+home.innerText = 'Home';
+nav.prepend(home);
+
+// CHANGE NAV TEXT GREEN 
+[...nav.children].map(e => e.setAttribute('style', 'color: green'));
+
+
 
 // BANNER
 let mainHeader = document.querySelector('div.cta-text > h1')
