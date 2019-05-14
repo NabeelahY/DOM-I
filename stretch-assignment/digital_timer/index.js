@@ -5,6 +5,9 @@ let tens = document.getElementById('msTens');
 
 let timerInterval;
 
+let digits = document.querySelector('div.digits');
+console.log(digits.children);
+
 function timer () {
     let seconds = 0;
     secondTens.innerText = 0;
@@ -27,8 +30,8 @@ function timer () {
             secondTens.innerText++;
         }
         if(secondTens.innerText === '1') {
-            console.log('here')
             clearInterval(timerInterval);
+            [...digits.children].map(e => e.setAttribute('style', 'color: red'));
         }
     }
 
